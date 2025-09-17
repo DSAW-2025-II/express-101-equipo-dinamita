@@ -9,7 +9,7 @@ require("dotenv").config();
 const userInfoRouter = require('./routes/user-info');
 
 app.get('/', (req, res) => {
-    res.send(`Welcome to the server. This team has ${process.env.MAX_ID} member(s).`);
+    res.send(`Welcome to the server. This team has ${process.env.MAX_ID} member(s). Take that into account for searching by IDs`);
 });
 
 app.use('/user-info', userInfoRouter);
