@@ -3,6 +3,14 @@ const router = express.Router();
 
 router.get('/:id', (req, res) => {
     const id = req.params.id;
+    
+    if (id > process.env.MAX_ID || id <= 0) {
+        if (id <= 0) {
+            res.status(404).json( { error: "Enter a valid ID" });
+        }
+        res.status(404).json({ error: "Resource not found" });
+    };
+    
     res.json({
         "name": process.env[`NAME_${id}`],
         "lastName": process.env[`LASTNAME_${id}`],
