@@ -6,9 +6,9 @@ router.get('/:id', (req, res) => {
     
     if (id > process.env.MAX_ID || id <= 0) {
         if (id <= 0) {
-            res.status(400).json( { error: "Enter a valid ID" });
+            return res.status(400).json( { error: "Enter a valid ID" });
         }
-        res.status(404).json({ error: "Resource not found" });
+        else { return res.status(404).json({ error: "Resource not found" }); }
     };
     
     res.json({
