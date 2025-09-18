@@ -5,8 +5,8 @@
 
 [Link](https://express-101-equipo-dinamita.vercel.app) de nuestro servidor desplegado. 
 
-Para acceder a la información de Carlos --> /user-info/1
-Para acceder a la información de Karol --> /user-info/2
+- Para acceder a la información de Carlos --> /user-info/1
+- Para acceder a la información de Karol --> /user-info/2
 
 # Taller en Parejas: Creación de un Endpoint con Express.js
 
